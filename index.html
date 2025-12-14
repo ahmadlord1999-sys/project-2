@@ -1,650 +1,922 @@
 <!DOCTYPE html>
+<html lang="en">
 
-    <head>
-        <link rel="stylesheet" href="css/style.css">
-        <title>project-2</title>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="./css/all.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Project-3 bootstrap</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
 
-    </head>
-    
-
-    <body>
+<body>
+    <main>
         <header>
-            <div class="heder1">
-                <div class="header1left heder11">
-                    <ul>
-                        <nav>
-                        <a href="#"><li>About Us</li></a>
-                        <a href="#"><li>Privacy</li></a>
-                        <a href="#"><li>FAQ</li></a>
-                        <a href="#"><li>Careers</li></a>
-                        </nav>
-                    </ul>
+            <nav class="navbar navbar-expand-lg navbar-light px-3 fixed-top" style="background-color:#e5e5e5;">
+                <div class="container-fluid">
+                    <img src="./Image/logo.png" alt="Urban Kicks Logo"
+                        width="50px" height="50px">
+                    <a class="navbar-brand fs-3 border-end border-secondary pe-3 border-2" href="#"><b>&nbsp Urban
+                            Kicks</b></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">About Us</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Categories
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="#">SPORTS SHOES</a></li>
+                                    <li><a class="dropdown-item" href="#">CASUAL SHOES</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">FORMAL SHOES</a></li>
+                                    <li><a class="dropdown-item" href="#">KIDS SHOES</a></li>
+                                    <li><a class="dropdown-item" href="#">WOMEN SHOES</a></li>
+                                    <li><a class="dropdown-item" href="#">MORE...</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact Us</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Search shoes..."
+                                aria-label="Search">
+                            <button class="btn btn-primary me-2" type="submit">Search</button>
+                            <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#loginModal"
+                                type="button">Login</button>
+                        </form>
+                    </div>
                 </div>
-                <div class="header1right heder11">
-                    <ul>
-                        <nav>
-                        <a href="#"><li>My Wishlist</li></a>
-                        <a href="#"><li>Track Your Order</li></a>
-                        <a href="#"><li><i class="fab fa-facebook icon1"></i></li></a>
-                        <a href="#"><li><i class="fab fa-instagram icon1"></i></li></a>
-                        <a href="#"><li><i class="fab fa-twitter icon1"></i></li></a>
-                        <a href="#"><li><i class="fab fa-linkedin-in icon1"></i></li></a>
-                        <a href="#"><li><i class="fab fa-youtube icon1"></i></li></a>
-                        </nav>
-                    </ul>
+            </nav>
+            <div class="modal fade" id="loginModal" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Log in</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Email
+                                    address</label>
+                                <input type="email" class="form-control" id="exampleFormControlInput1"
+                                    placeholder="Enter your email">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="exampleFormControlInput1"
+                                    placeholder="****">
+                            </div>
+                            <input type="checkbox"> Remember me
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary w-100" data-bs-dismiss="modal">Log in</button>
+                        </div>
+                    </div>
                 </div>
-             </div> <!-- heder1 -->
+            </div>
+        </header>
+
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" style="height: 100vh;">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner h-100">
+                <div class="carousel-item active h-100">
+                    <img src="./Image/60.avif" class="d-block w-100 h-100" alt="Sports Shoes" style="object-fit: cover;">
+                    <div class="carousel-caption d-block">
+                        <div class="overlay w-75 mx-auto rounded p-3 border border-light">
+                            <h4 class="fs-5 fs-md-3">SPORTS SHOES</h4>
+                            <p class="fs-6 fs-md-5">High-quality sports shoes for maximum comfort and performance during
+                                workouts and daily activities.</p>
+                            <button class="btn btn-outline-primary me-2 text-light">Shop Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item h-100">
+                    <img src="./Image/61.avif" class="d-block w-100 h-100" alt="Casual Shoes" style="object-fit: cover;">
+                    <div class="carousel-caption d-block">
+                        <div class="overlay w-75 mx-auto rounded p-3 border border-light">
+                            <h4 class="fs-5 fs-md-3">CASUAL SHOES</h4>
+                            <p class="fs-6 fs-md-5">Stylish and comfortable casual shoes for everyday wear with modern
+                                designs and perfect fit.</p>
+                            <button class="btn btn-outline-primary me-2 text-light">Shop Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item h-100">
+                    <img src="./Image/62.avif" class="d-block w-100 h-100" alt="Formal Shoes" style="object-fit: cover;">
+                    <div class="carousel-caption d-block">
+                        <div class="overlay w-75 mx-auto rounded p-3 border border-light">
+                            <h4 class="fs-5 fs-md-3">FORMAL SHOES</h4>
+                            <p class="fs-6 fs-md-5">Elegant formal shoes for business meetings and special occasions
+                                with premium leather quality.</p>
+                            <button class="btn btn-outline-primary me-2 text-light">Shop Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item h-100">
+                    <img src="./Image/63.avif" class="d-block w-100 h-100" alt="Special Offers" style="object-fit: cover;">
+                    <div class="carousel-caption d-block">
+                        <div class="overlay w-75 mx-auto rounded p-3 border border-light">
+                            <h4 class="fs-5 fs-md-3">SPECIAL OFFERS</h4>
+                            <p class="fs-6 fs-md-5">Up to 50% discount on selected shoe collections. Limited time
+                                offer!</p>
+                            <button class="btn btn-outline-primary me-2 text-light">Shop Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <div class="d-flex flex-column position-fixed top-50 end-0 translate-middle-y me-2 gap-3 social-icons ">
+            <a href="#"><i class="fab fa-facebook-square fa-2x"></i></a>
+            <a href="#"><i class="fab fa-twitter-square fa-2x"></i></a>
+            <a href="#"><i class="fab fa-whatsapp-square fa-2x"></i></a>
+            <a href="#"><i class="fab fa-instagram-square fa-2x"></i></a>
+            <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+        </div>
+    </main>
+
+    <section>
+        <div class="container-fluid rounded p-3 bg-gradient-section">
+            <h3><b>Welcome to Urban Kicks</b></h3>
+            <p class="text-light">Welcome to Urban Kicks - Your premier destination for stylish and comfortable
+                footwear. We offer a wide range of sports shoes, casual shoes, and formal shoes from top global brands.
+                Experience the perfect blend of quality, style, and comfort with every step. Browse our collection and
+                discover shoes that match your lifestyle.</p>
+            <button type="button" class="btn btn-primary text-light">Learn More</button>
+        </div>
+        <hr>
+
+        <div class="container-fluid rounded p-5 bg-light-section">
+            <h3 class="text-light text-center"><i><b>The Most Popular Shoes In Our Store</b></i></h3>
+        </div>
+
+        <div class="accordion mt-4" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button collapsed text-secondary shadow-none border-bottom border-secondary"
+                        type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false"
+                        aria-controls="collapseOne">
+                        Sports Shoes
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Designed to provide support and comfort during physical activities. Made with high-quality
+                        materials that offer ventilation and cushioning. Perfect for running, gym workouts, or daily
+                        use. Features advanced technologies for better performance and injury prevention.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed text-secondary shadow-none  border-bottom border-secondary"
+                        type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                        aria-controls="collapseTwo">
+                        Casual Shoes
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Comfortable and stylish shoes for everyday wear. Combine fashion and comfort in modern designs
+                        that suit various tastes. Available in multiple colors and styles to match different casual
+                        occasions. Perfect for walking, shopping, or hanging out with friends.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed text-secondary shadow-none border-bottom border-secondary"
+                        type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                        aria-controls="collapseThree">
+                        Formal Shoes
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Elegant shoes for formal occasions and business settings. Crafted from premium leather with
+                        classic and contemporary designs. Provide a sophisticated appearance while ensuring comfort
+                        throughout the day. Ideal for important meetings, weddings, and special events.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </section>
+
+    <section>
+        <div class="container-fluid rounded p-4 bg-light-section">
+            <h3 class="text-light text-center"><i><b>Customer Support</b></i></h3>
+        </div>
+        <div class="container-fluid rounded p-3 bg-gradient-section">
+            <span class="text-light fs-4"><b>Need Help?</b></span>
+            <span class="fs-4 text-primary"><b>&nbsp Contact Us</b></span><br>
+
+            <button type="button" class="btn btn-primary text-light copyBtn" data-bs-toggle="modal"
+                data-bs-target="#myModal1">
+                Send Message
+            </button>
+            <span class="badge rounded-pill bg-secondary ms-2 copiedLabel d-none">Sent!</span>
+
+            <br><br>
+            <div class="modal fade" id="myModal1" tabindex="-1" aria-labelledby="myModalLabel1" aria-hidden="true">
+                <div class="modal-dialog mt-5">
+                    <div class="modal-content">
+                        <div class="modal-header border-bottom">
+                            <h5 class="modal-title text-primary"><i>Contact Us</i></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Your message has been sent successfully!
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Ok</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <textarea class="rounded mt-2 w-100 p-2" style="height: 150px;"
+                placeholder="Write your message here..."></textarea>
+        </div>
+        <hr>
+
+        <div class="container-fluid rounded p-4 bg-light-section">
+            <h3 class="text-light text-center"><i><b>Shipping Information</b></i></h3>
+        </div>
+        <div class="container-fluid rounded p-3 bg-gradient-section">
+            <span class="text-light fs-4"><b>Fast Delivery</b></span>
+            <span class="fs-4 text-primary"><b>&nbsp Track Your Order</b></span><br>
+
+            <button type="button" class="btn btn-primary text-light copyBtn" data-bs-toggle="modal"
+                data-bs-target="#myModal2">
+                Track
+            </button>
+            <span class="badge rounded-pill bg-secondary ms-2 copiedLabel d-none">Tracking!</span>
+
+            <br><br>
+            <div class="modal fade" id="myModal2" tabindex="-1" aria-labelledby="myModalLabel2" aria-hidden="true">
+                <div class="modal-dialog mt-5">
+                    <div class="modal-content">
+                        <div class="modal-header border-bottom">
+                            <h5 class="modal-title text-primary"><i>Order Tracking</i></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Enter your order number to track your shipment.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Ok</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <textarea class="rounded mt-2 w-100 p-2" style="height: 150px;"
+                placeholder="Enter your order number..."></textarea>
+        </div>
+        <hr>
+
+        <div class="container-fluid rounded p-4 bg-light-section">
+            <h3 class="text-light text-center"><i><b>Size Guide</b></i></h3>
+        </div>
+        <div class="container-fluid rounded p-3 bg-gradient-section">
+            <span class="text-light fs-4"><b>Find Your Size</b></span>
+            <span class="fs-4 text-primary"><b>&nbsp Check Size Chart</b></span><br>
+
+            <button type="button" class="btn btn-primary text-light copyBtn" data-bs-toggle="modal"
+                data-bs-target="#myModal3">
+                Size Guide
+            </button>
+            <span class="badge rounded-pill bg-secondary ms-2 copiedLabel d-none">Opened!</span>
+
+            <br><br>
+            <div class="modal fade" id="myModal3" tabindex="-1" aria-labelledby="myModalLabel3" aria-hidden="true">
+                <div class="modal-dialog mt-5">
+                    <div class="modal-content">
+                        <div class="modal-header border-bottom">
+                            <h5 class="modal-title text-primary"><i>Size Guide</i></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Please refer to our size chart for accurate measurements.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Ok</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <textarea class="rounded mt-2 w-100 p-2" style="height: 150px;"
+                placeholder="Check our size guide..."></textarea>
+        </div>
+        <hr>
+    </section>
+
+    <section>
+        <div class="container-fluid shoe-banner">
+        </div>
+    </section>
+
+    <section>
+        <div class="container-fluid rounded p-4 mt-5 bg-light-section">
+            <h3 class="text-light text-center"><i><b>..Popular Shoes in Our Store..</b></i></h3>
+        </div>
+        <div class="container my-5">
+            <div class="row g-4 justify-content-center">
+                <div class="col-sm-4 col-10">
+                    <div class="card h-100 special-card">
+                        <div class="p-2 position-relative">
+                            <span class="brand-badge">Nike</span>
+                            <img src="./Image/44.avif"class="card-img-top" alt="Nike Sports Shoes" style="height: 250px; object-fit: cover;">
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title"><b><i>NIKE AIR MAX</i></b></h5>
+                            <div class="d-flex znbtn">
+                                <a href="#" class="btn btn-primary text-light d-inline-block ms-auto px-4">VIEW</a>
+                            </div>
+                            <p class="card-text mt-2">
+                                Comfortable sports shoes with Air Max technology for maximum cushioning and support
+                                during workouts.
+                            </p>
+                            <div class="price-tag">$129.99</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4 col-10">
+                    <div class="card h-100 special-card">
+                        <div class="p-2 position-relative">
+                            <span class="brand-badge">Adidas</span>
+                            <img src="./Image/45.avif" class="card-img-top" alt="Adidas Shoes" style="height: 250px; object-fit: cover;">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title"><b><i>ADIDAS ULTRA BOOST</i></b></h5>
+                            <div class="d-flex znbtn">
+                                <a href="#" class="btn btn-primary text-light d-inline-block ms-auto px-4">VIEW</a>
+                            </div>
+                            <p class="card-text mt-2">
+                                Lightweight running shoes with Boost technology for energy return and all-day comfort.
+                            </p>
+                            <div class="price-tag">$149.99</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4 col-10">
+                    <div class="card h-100 special-card">
+                        <div class="p-2 position-relative">
+                            <span class="brand-badge">Puma</span>
+                            <img src="./Image/46.avif"
+                                class="card-img-top" alt="Puma Shoes" style="height: 250px; object-fit: cover;">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title"><b><i>PUMA RS-X</i></b></h5>
+                            <div class="d-flex znbtn">
+                                <a href="#" class="btn btn-primary text-light d-inline-block ms-auto px-4">VIEW</a>
+                            </div>
+                            <p class="card-text mt-2">
+                                Bold and trendy casual shoes with chunky design, perfect for street style fashion.
+                            </p>
+                            <div class="price-tag">$89.99</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4 mt-4 justify-content-center">
+                <div class="col-sm-4 col-10">
+                    <div class="card h-100 special-card">
+                        <div class="p-2 position-relative">
+                            <span class="brand-badge">New Balance</span>
+                            <img src="./Image/50.avif" class="card-img-top" alt="New Balance Shoes" style="height: 250px; object-fit: cover;">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title"><b><i>NEW BALANCE 574</i></b></h5>
+                            <div class="d-flex znbtn">
+                                <a href="#" class="btn btn-primary text-light d-inline-block ms-auto px-4">VIEW</a>
+                            </div>
+                            <p class="card-text mt-2">
+                                Classic sneakers combining retro style with modern comfort technology for everyday wear.
+                            </p>
+                            <div class="price-tag">$79.99</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4 col-10">
+                    <div class="card h-100 special-card">
+                        <div class="p-2 position-relative">
+                            <span class="brand-badge">Converse</span>
+                            <img src="./Image/21.png" class="card-img-top" alt="Converse Shoes" style="height: 250px; object-fit: cover;">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title"><b><i>CONVERSE CHUCK TAYLOR</i></b></h5>
+                            <div class="d-flex znbtn">
+                                <a href="#" class="btn btn-primary text-light d-inline-block ms-auto px-4">VIEW</a>
+                            </div>
+                            <p class="card-text mt-2">
+                                Iconic canvas sneakers with timeless design, suitable for various casual occasions.
+                            </p>
+                            <div class="price-tag">$59.99</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4 col-10">
+                    <div class="card h-100 special-card">
+                        <div class="p-2 position-relative">
+                            <span class="brand-badge">Vans</span>
+                            <img src="./Image/51.avif" class="card-img-top" alt="Vans Shoes" style="height: 250px; object-fit: cover;">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title"><b><i>VANS OLD SKOOL</i></b></h5>
+                            <div class="d-flex znbtn">
+                                <a href="#" class="btn btn-primary text-light d-inline-block ms-auto px-4">VIEW</a>
+                            </div>
+                            <p class="card-text mt-2">
+                                Classic skate shoes with side stripe, durable construction for skateboarding and casual
+                                wear.
+                            </p>
+                            <div class="price-tag">$69.99</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-5 mt-4 justify-content-center">
+                <div class="col-sm-4 col-10 mb-5">
+                    <div class="card h-100 special-card">
+                        <div class="p-2 position-relative">
+                            <span class="brand-badge">Reebok</span>
+                            <img src="./Image/37.png" class="card-img-top" alt="Reebok Shoes" style="height: 250px; object-fit: cover;">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title"><b><i>REEBOK CLASSIC</i></b></h5>
+                            <div class="d-flex znbtn">
+                                <a href="#" class="btn btn-primary text-light d-inline-block ms-auto px-4">VIEW</a>
+                            </div>
+                            <p class="card-text mt-2">
+                                Retro-style sneakers with leather upper and comfortable cushioning for vintage look
+                                lovers.
+                            </p>
+                            <div class="price-tag">$74.99</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4 col-10 mb-5">
+                    <div class="card h-100 special-card">
+                        <div class="p-2 position-relative">
+                            <span class="brand-badge">Skechers</span>
+                            <img src="./Image/45.avif" class="card-img-top" alt="Skechers Shoes" style="height: 250px; object-fit: cover;">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title"><b><i>SKECHERS MEMORY FOAM</i></b></h5>
+                            <div class="d-flex znbtn">
+                                <a href="#" class="btn btn-primary text-light d-inline-block ms-auto px-4">VIEW</a>
+                            </div>
+                            <p class="card-text mt-2">
+                                Ultra-comfortable shoes with memory foam insoles, perfect for long walks and standing.
+                            </p>
+                            <div class="price-tag">$64.99</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container-fluid shoe-banner">
+        </div>
+        <hr>
+    </section>
+
+    <section>
+        <div class="container-fluid rounded py-4 bg-light-section">
+            <h3 class="text-light text-center"><i><b>..Customer Testimonials..</b></i></h3>
+        </div>
+        <div class="container px-5 " style="margin-top: 80px;">
+            <div class="row justify-content-center" style="gap: 50px;">
+                <div class="col-sm-3 col-8">
+                    <div class="card bg-dark text-white custom-card" style="height: 250px;border-radius: 20px;">
+                        <img src="./Image/43.jpg" class="card-img h-100" alt="Customer 1" style="border-radius: 20px; object-fit: cover;">
+                        <div class="card-img-overlay h-100" style="border-radius: 20px;">
+                            <h5 class="card-title " style="font-size:15px;color: rgb(230, 230, 230)"><b><i>Great Quality!</i></b></h5>
+                            <p class="card-text" style="color: rgb(230, 230, 230)">🕔 May 22, 2023</p>
+                            <img src="./Image/43.jpg"
+                                alt="Customer 1"
+                                class="rounded-pill border border-2 border-white position-absolute"
+                                style="width: 70px; height: 90px; bottom: 55px; left: 20px; object-fit: cover;" />
+                            <div style="position: absolute; bottom: 5px; left: 20px;">
+                                <p class="mb-1 fw-semibold" style="font-size: 1rem;">Sally Crowe</p>
+                                <p class="mb-0 fst-italic" style="font-size: 0.9rem;">Graphic Designer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3 col-8">
+                    <div class="card bg-dark text-white custom-card" style="height: 250px;border-radius: 20px;">
+                        <img src="./Image/42.jpg" class="card-img h-100" alt="Customer 2" style="border-radius: 20px; object-fit: cover;">
+                        <div class="card-img-overlay h-100" style="border-radius: 20px;">
+                            <h5 class="card-title " style="font-size:15px;color: rgb(230, 230, 230)"><b><i>Fast Delivery</i></b></h5>
+                            <p class="card-text" style="color: rgb(230, 230, 230)">🕔 June 10, 2023</p>
+                            <img src="./Image/42.jpg"alt="Customer 2" class="rounded-pill border border-2 border-white position-absolute" style="width: 70px; height: 90px; bottom: 55px; left: 20px; object-fit: cover;" />
+                            <div style="position: absolute; bottom: 5px; left: 20px;">
+                                <p class="mb-1 fw-semibold" style="font-size: 1rem;">Ahmad oqla</p>
+                                <p class="mb-0 fst-italic" style="font-size: 0.9rem;">Software Engineer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3 col-8">
+                    <div class="card bg-dark text-white custom-card" style="height: 250px;border-radius: 20px;">
+                        <img src="./Image/p1.jpg" class="card-img h-100" alt="Customer 3" style="border-radius: 20px; object-fit: cover;">
+                        <div class="card-img-overlay h-100" style="border-radius: 20px;">
+                            <h5 class="card-title " style="font-size:15px;color: rgb(230, 230, 230)"><b><i>Perfect Fit</i></b></h5>
+                            <p class="card-text " style="color: rgb(230, 230, 230)">🕔 July 5, 2023</p>
+                            <img src="./Image/p1.jpg"alt="Customer 3" class="rounded-pill border border-2 border-white position-absolute" style="width: 70px; height: 90px; bottom: 55px; left: 20px; object-fit: cover;" />
+                            <div style="position: absolute; bottom: 5px; left: 20px;">
+                                <p class="mb-1 fw-semibold" style="font-size: 1rem;">Sila Mohammed</p>
+                                <p class="mb-0 fst-italic" style="font-size: 0.9rem;">Marketing Manager</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h3 class="text-center section-title" style="margin-top: 100px;"><b><i>Store News & Updates</i></b></h3>
+        <div class="container-md wider-container px-0 px-md-3" style="margin-top: 40px;">
+            <div class="card mb-3 w-100 px-2">
+                <div class="row g-0 h-100">
+                    <div class="col-md-4 clip-slant order-1 order-md-2 d-none d-md-block">
+                        <div class="special-image special-image1 min-vh-25 h-100"></div>
+                    </div>
+                    <div class="col-md-4 order-1 order-md-2 d-md-none d-block clip-rect">
+                        <div class="special-image special-image1 "></div>
+                    </div>
+                    <div class="col-md-8 d-flex order-2 order-md-1">
+                        <div class="card-body my-auto">
+                            <h3 class="card-title text-primary fs-3"><b><i>New Collection Launch</i></b></h3>
+                            <p class="card-text border-bottom d-inline-block border-4 border-primary pb-2"
+                                style="font-size: 12px;">
+                                <b>Mon. May 25th 2023</b>
+                            </p>
+                            <p class="card-text fs-6 d-none d-md-block">
+                                We're excited to announce the launch of our Summer 2023 collection! This season brings
+                                vibrant colors, innovative materials, and cutting-edge designs that combine style with
+                                functionality. From lightweight running shoes to stylish casual wear, our new collection
+                                has something for everyone. Experience the latest in footwear technology with improved
+                                cushioning, better breathability, and enhanced durability. Visit our store or shop
+                                online to explore the complete collection and find your perfect pair for the summer
+                                season.
+                            </p>
+                            <p class="card-text d-md-none d-block" style="font-size: 13px;">
+                                We're excited to announce the launch of our Summer 2023 collection! This season brings
+                                vibrant colors, innovative materials, and cutting-edge designs that combine style with
+                                functionality.
+                            </p>
+                            <a href="#"
+                                class="btn btn-primary text-light d-inline-block ms-auto px-2 mt-3 special-btn me-1 fs-6">🎙
+                                Podcast</a>
+                            <a href="#"
+                                class="btn btn-primary text-light d-inline-block ms-auto px-2 mt-3 special-btn me-1 fs-6">🕔
+                                15 mins</a>
+                            <a href="#"
+                                class="btn btn-primary text-light d-inline-block ms-auto px-2 mt-3 special-btn fs-6">▶
+                                Play
+                                Episode</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-3 w-100 px-2 " style="margin-top: 40px;">
+                <div class="row g-0 h-100">
+                    <div class="col-md-4 order-1 order-md-1 d-none d-md-block clip-slant2">
+                        <div class="special-image special-image2 min-vh-25 h-100"></div>
+                    </div>
+                    <div class="col-md-4 order-1 order-md-1 d-md-none d-block clip-rect">
+                        <div class="special-image special-image2 "></div>
+                    </div>
+                    <div class="col-md-8 d-flex order-2 order-md-1">
+                        <div class="card-body my-auto">
+                            <h3 class="card-title text-primary fs-3"><b><i>Shoe Care Tips</i></b></h3>
+                            <p class="card-text border-bottom d-inline-block border-4 border-primary pb-2"
+                                style="font-size: 12px;">
+                                <b>Tue. June 10th 2023</b>
+                            </p>
+                            <p class="card-text fs-6 d-none d-md-block">
+                                Proper shoe care can significantly extend the life of your footwear. Learn how to clean
+                                different materials, from leather and suede to canvas and synthetic fabrics. We'll share
+                                expert tips on storage, protection, and maintenance that will keep your shoes looking
+                                new for longer. Discover the right cleaning products for each material type and learn
+                                how to address common issues like scuff marks, water stains, and odor control. Join our
+                                free workshop this weekend or listen to our podcast for detailed guidance on keeping
+                                your investment in top condition.
+                            </p>
+                            <p class="card-text d-md-none d-block" style="font-size: 13px;">
+                                Proper shoe care can significantly extend the life of your footwear. Learn how to clean
+                                different materials, from leather and suede to canvas and synthetic fabrics.
+                            </p>
+                            <a href="#"
+                                class="btn btn-primary text-light d-inline-block ms-auto px-2 mt-3 special-btn me-1 fs-6">🎙
+                                Podcast</a>
+                            <a href="#"
+                                class="btn btn-primary text-light d-inline-block ms-auto px-2 mt-3 special-btn me-1 fs-6">🕔
+                                22
+                                mins</a>
+                            <a href="#"
+                                class="btn btn-primary text-light d-inline-block ms-auto px-2 mt-3 special-btn fs-6">▶
+                                Play
+                                Episode</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-3 w-100 px-2">
+                <div class="row g-0 h-100">
+                    <div class="col-md-4 clip-slant order-1 order-md-2 d-none d-md-block">
+                        <div class="special-image special-image3 min-vh-25 h-100"></div>
+                    </div>
+                    <div class="col-md-4 order-1 order-md-2 d-md-none d-block clip-rect">
+                        <div class="special-image special-image3 "></div>
+                    </div>
+                    <div class="col-md-8 d-flex order-2 order-md-1">
+                        <div class="card-body my-auto">
+                            <h3 class="card-title text-primary fs-3"><b><i>Store Anniversary Sale</i></b></h3>
+                            <p class="card-text border-bottom d-inline-block border-4 border-primary pb-2"
+                                style="font-size: 12px;">
+                                <b>Fri. July 15th 2023</b>
+                            </p>
+                            <p class="card-text fs-6 d-none d-md-block">
+                                Celebrate our 5th anniversary with us! We're offering special discounts, exclusive
+                                deals, and limited edition products throughout the month. This is our way of thanking
+                                our loyal customers for their continued support. Enjoy up to 50% off on selected items,
+                                buy-one-get-one offers, and special gift bundles. Visit our physical stores for in-person
+                                celebrations with refreshments and personalized fitting sessions. Don't miss this
+                                opportunity to upgrade your shoe collection with premium products at unbeatable prices.
+                            </p>
+                            <p class="card-text d-md-none d-block" style="font-size: 13px;">
+                                Celebrate our 5th anniversary with us! We're offering special discounts, exclusive
+                                deals, and limited edition products throughout the month. This is our way of thanking
+                                our loyal customers.
+                            </p>
+                            <a href="#"
+                                class="btn btn-primary text-light d-inline-block ms-auto px-2 mt-3 special-btn me-1 fs-6">🎙
+                                Podcast</a>
+                            <a href="#"
+                                class="btn btn-primary text-light d-inline-block ms-auto px-2 mt-3 special-btn me-1 fs-6">🕔
+                                18 mins</a>
+                            <a href="#"
+                                class="btn btn-primary text-light d-inline-block ms-auto px-2 mt-3 special-btn fs-6">▶
+                                Play
+                                Episode</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-3 w-100 px-2 " style="margin-top: 40px;">
+                <div class="row g-0 h-100">
+                    <div class="col-md-4 order-1 order-md-1 d-none d-md-block clip-slant2">
+                        <div class="special-image special-image4 min-vh-25 h-100"></div>
+                    </div>
+                    <div class="col-md-4 order-1 order-md-1 d-md-none d-block clip-rect">
+                        <div class="special-image special-image4 "></div>
+                    </div>
+                    <div class="col-md-8 d-flex order-2 order-md-1">
+                        <div class="card-body my-auto">
+                            <h3 class="card-title text-primary fs-3"><b><i>Foot Health Awareness</i></b></h3>
+                            <p class="card-text border-bottom d-inline-block border-4 border-primary pb-2"
+                                style="font-size: 12px;">
+                                <b>Wed. August 2nd 2023</b>
+                            </p>
+                            <p class="card-text fs-6 d-none d-md-block">
+                                Your foot health matters! We're partnering with podiatrists to educate our customers
+                                about proper footwear selection for different foot types and conditions. Learn how to
+                                choose shoes that provide adequate arch support, proper fit, and necessary features for
+                                specific activities. We'll discuss common foot problems and how the right footwear can
+                                prevent or alleviate issues like plantar fasciitis, bunions, and flat feet. Join our
+                                free consultation sessions where experts will assess your gait and recommend suitable
+                                shoe options for your needs.
+                            </p>
+                            <p class="card-text d-md-none d-block" style="font-size: 13px;">
+                                Your foot health matters! We're partnering with podiatrists to educate our customers
+                                about proper footwear selection for different foot types and conditions.
+                            </p>
+                            <a href="#"
+                                class="btn btn-primary text-light d-inline-block ms-auto px-2 mt-3 special-btn me-1 fs-6">🎙
+                                Podcast</a>
+                            <a href="#"
+                                class="btn btn-primary text-light d-inline-block ms-auto px-2 mt-3 special-btn me-1 fs-6">🕔
+                                25
+                                mins</a>
+                            <a href="#"
+                                class="btn btn-primary text-light d-inline-block ms-auto px-2 mt-3 special-btn fs-6">▶
+                                Play
+                                Episode</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container w-75" style="margin-top: 100px;">
+            <div class="row justify-content-center">
+                <div class="col-sm-6 col-md-4 col-lg-3 mb-4 d-flex justify-content-center">
+                    <div class="card border-secondary special-card2">
+                        <div class="card-body text-center">
+                            <h4 class="card-title fs-6"><b><i>Free Shipping</i></b></h4>
+                            <img src="./Image/47.png" alt="24/7 Support"class="img-fluid d-block mx-auto " style="width: 70px; height: 70px;margin-top: 16px; ">
+                            <br>
+                            <a href="#" class="d-inline-block ">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-3 mb-4 d-flex justify-content-center">
+                    <div class="card border-secondary special-card2">
+                        <div class="card-body text-center">
+                            <h4 class="card-title fs-6">
+                                <b><i>30-Day Returns</i></b>
+                            </h4>
+                            <img src="./Image/48.png" alt="30-Day Returns"
+                                class="img-fluid d-block mx-auto " style="width: 70px; height: 70px;margin-top: 16px; ">
+                            <a href="#" class="d-inline-block mt-3">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-3 mb-4 d-flex justify-content-center">
+                    <div class="card border-secondary special-card2">
+                        <div class="card-body text-center">
+                            <h4 class="card-title fs-6">
+                                <b><i>Secure Payment</i></b>
+                            </h4>
+                            <img src="./Image/49.png" alt="Secure Payment"
+                                class="img-fluid d-block mx-auto " style="width: 70px; height: 70px;margin-top: 16px; ">
+                            <a href="#" class="d-inline-block mt-3">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-3 mb-4 d-flex justify-content-center">
+                    <div class="card border-secondary special-card2">
+                        <div class="card-body text-center">
+                            <h4 class="card-title fs-6">
+                                <b><i>24/7 Support</i></b>
+                            </h4>
+                            <img src="./Image/47.png" alt="24/7 Support"class="img-fluid d-block mx-auto " style="width: 70px; height: 70px;margin-top: 16px; ">
+                            <a href="#" class="d-inline-block mt-3">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container-fluid footer-section">
+            <br>
             <hr>
-            <div class="header2">
-                <div class="header2-logo"><figure><img src="./Image/5.png" alt="logo" width="100px" height="30px"></figure>Nike&nbsp;<span class="header2-logo-sp"> Shoes</span></div>
-                <div class="header2-content">
-                    <ul>
-                        <nav>
-                        <a href="#" class=" befor"><li>Home</li></a>
-                        <a href="#" class=" befor"><li>Men</li></a>
-                        <a href="#" class=" befor"><li>Women</li></a>
-                        <a href="#" class=" befor"><li>Baby Collection</li></a>
-                        </nav>
-                        <div class="selcet-drop">
-                         <nav>   
-                          <a href="#" class=" befor"><li>Pages<i class="fas fa-caret-down"></i></li></a>
-                         </nav>
-                            <div class="drop-down">
-                                <div class="dropdon-1">
-                                    <p class="title-drop-down">pages</p>
-                                    <nav>
-                                    <a href="#">login</a>
-                                    <a href="#">CartProduct </a>
-                                    <a href="#">DetailsProduct</a>
-                                    <a href="#">Checkout</a>
-                                    </nav>
-                                    
-                                </div>
-                                <div class="dropdon-1">
-                                    <p class="title-drop-down">blog</p>
-                                    <nav>
-                                    <a href="#">Element</a>
-                                    <a href="#">Blog Details</a>
-                                    </nav>
-                                </div>
-                                
-                              </div>
-                              
-                        </div>  <!--selcet-drop-->
-                        <nav>
-                        <a href="#" class=" befor"><li>Contact</li></a>
-                        </nav>
-                    </ul>
-                </div>  <!--header2-content-->
-                <div class="header2-icon">
-                 <ul>
-                   <nav>
-                    <a href="#"><li><i class="fas fa-search"></i></li></a>
-                    <a href="#"><li><i class="fas fa-user"></i></li></a>
-                    <a href="#" class="contshop"><li><i class="fas fa-shopping-cart"></i><div class="icon-span">2</div></li></a>
-                   </nav>
-                 </ul>
-                </div> <!--header2-icon-->
-
-            </div> <!--header2-->
-        </header>  <!--header-->
-
-        <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
-        <main class="main-only">
-            <h2 class="main-only-prg">Sale Up To 50% Biggest Discounts. Hurry! Limited Perriod Offer&nbsp;&nbsp; <span class="main-only-prg-sp">shop now</span></h2>
-            <div class="main-only-parent">
-                <div class="main-only-parent-card">
-                    <div class="main-only-parent-card-content">
-                        <h2 class="main-only-title">Fashion Sale</h2>
-                        <h1 class="main-only-head">Minimal Menz Style</h1>
-                        <p class="main-only-pr">Consectetur adipisicing elit. Laborum fuga incidunt laboriosam voluptas iure, delectus dignissimos facilis neque nulla earum.</p>
-                        <button class="main-only-btn">shop now</button>
-                    </div>
-                </div>
-                <div class="main-only-parent-img"></div>
-                
-            </div>  <!--main-only-parent-->
-
-        </main>  <!--main-only  -->
-        <!-- ////////////////////////////////////////////////////////////////////////////////////////// -->
-
-        <section class="section1">
-            <div class="section1-parent">
-                <div class="section1-parent-card">
-                    <figure>
-                     <img class="section1-parent-card-img" src="./Image/2.png"  style="width: 100%; height: 100%; position: absolute; z-index: -2;" >
-                    </figure>
-                    <div class="section1-parent-card-overlay">
-                        <div class="section1-parent-card-overlay-content">
-                            <h3 class="section1-parent-card-overlay-content-title">nike g.t. cut 3</h3>
-                            <nav>
-                             <a href="#" class="section1-parent-card-overlay-content-lin"><p class="section1-parent-card-overlay-content-pr">shop now</p></a>
-                            </nav>
+            <div class="container py-3 d-none d-sm-block">
+                <div class="row text-center align-items-center mb-2">
+                    <div class="col-sm-4">
+                        <img src="./Image/logo.png" alt="Urban Kicks Logo"
+                            style="width:100px;height:100px;">
+                        <div class="fs-5 footer-text">
+                            <b><i>Urban Kicks</i></b>
                         </div>
-
                     </div>
-                </div>
-                 <div class="section1-parent-card">
-                    <figure>
-                     <img class="section1-parent-card-img" src="./Image/6.png"  style="width: 100%; height: 100%; position: absolute; z-index: -2;" >
-                    </figure>
-                    <div class="section1-parent-card-overlay">
-                        <div class="section1-parent-card-overlay-content">
-                            <h3 class="section1-parent-card-overlay-content-title">nike air force 1 LE</h3>
-                            <nav>
-                             <a href="#" class="section1-parent-card-overlay-content-lin"><p class="section1-parent-card-overlay-content-pr">shop now</p></a>
-                            </nav>
+                    <div class="col-sm-4">
+                        <img src="./Image/logo.png" alt="Urban Kicks Logo"
+                            style="width:100px;height:100px;">
+                        <div class="fs-5 footer-text">
+                            <b><i>Quick Links</i></b>
                         </div>
-
                     </div>
-                </div>
-                <div class="section1-parent-card">
-                    <figure>
-                        <img class="section1-parent-card-img" src="./Image/7.png"  style="width: 100%; height: 100%; position: absolute; z-index: -2;" >
-                    </figure>    
-
-                    <div class="section1-parent-card-overlay">
-                        <div class="section1-parent-card-overlay-content">
-                            <h3 class="section1-parent-card-overlay-content-title">Women’s Shoes</h3>
-                            <nav>
-                             <a href="#" class="section1-parent-card-overlay-content-lin"><p class="section1-parent-card-overlay-content-pr">shop now</p></a>
-                            </nav>
-                        </div>
-
-                    </div>
-                </div>
-            </div>  <!--section1-parent  -->
-        </section>  <!--section1  -->
-
-        <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
-        <section class="section2">
-            <div class="section2-parent">
-                <div class="section2-parent-titlemain">
-                 <div class="section2-parent-titlemain-left-right">
-                    <div class="section2-parent-titlemain-title">
-                        <h2 class="section2-parent-titlemain-title-1">Trending This Week</h2>
-                    </div>
-                    <div class="section2-parent-titlemain-title-2">
-                        <nav>
-                         <a class="section2-parent-titlemain-title-2-link" href="#">men</a>
-                         <a class="section2-parent-titlemain-title-2-link  section2-parent-titlemain-title-2-link-befor" href="#">women</a>
-                         <a class="section2-parent-titlemain-title-2-link"href="#">baby</a>
-                         <a class="section2-parent-titlemain-title-2-link" href="#">fashion</a>
-                        </nav>
-                    </div>
-                 </div>
-                 <hr class="section2-parent-titlemain-line">
-                </div>
-
-                <div class="section2-parent-cards">
-                    <div class="section2-parent-cards-icon1"><i class="fas fa-chevron-left"></i></div>
-                    <div class="section2-parent-cardsparent">
-                        <div class="section2-parent-cards-card1">
-
-                            <div class="section2-parent-cards-card1-img">
-                                <div class="section2-parent-cards-card1-img1"><img src="./Image/8.png" style="width: 100%; height: 350px;"></div>
-                                <div class="section2-parent-cards-card1-img2">
-                                    <img src="./Image/12.png" style="width: 100%; height: 350px;">
-                                    <div class="section2-parent-cards-card1-img2-icons">
-                                          <i class="fas fa-cart-plus"></i>
-                                          <i class="far fa-heart"></i>
-                                          <i class="fas fa-search-plus"></i>
-                                    </div>
-
-                                    
-                                </div>
-                            </div>
-                            <div class="section2-parent-cards-card1-content">
-                                <h3 class="section2-parent-cards-card1-content-pr1">Nike Mercurial Vapor 16 Elite</h3>
-                                <p class="section2-parent-cards-card1-content-pr2">$70 <span>$130</span></p>
-
-                            </div>
-
-                        </div>
-                        <div class="section2-parent-cards-card1">
-
-                            <div class="section2-parent-cards-card1-img">
-                                <div class="section2-parent-cards-card1-img1"><img src="./Image/14.png" style="width: 100%; height: 350px;"></div>
-                                <div class="section2-parent-cards-card1-img2">
-                                    <img src="./Image/13.png" style="width: 100%; height: 350px;">
-                                    <div class="section2-parent-cards-card1-img2-icons">
-                                          <i class="fas fa-cart-plus"></i>
-                                          <i class="far fa-heart"></i>
-                                          <i class="fas fa-search-plus"></i>
-                                    </div>
-
-                                    
-                                </div>
-                            </div>
-                            <div class="section2-parent-cards-card1-content">
-                                <h3 class="section2-parent-cards-card1-content-pr1">Nike Dunk Low</h3>
-                                <p class="section2-parent-cards-card1-content-pr2">$60 <span>$90</span></p>
-
-                            </div>
-
-                        </div>
-                        <div class="section2-parent-cards-card1">
-
-                            <div class="section2-parent-cards-card1-img">
-                                <div class="section2-parent-cards-card1-img1"><img src="./Image/18.png" style="width: 100%; height: 350px;"></div>
-                                <div class="section2-parent-cards-card1-img2">
-                                    <img src="./Image/19.png" style="width: 100%; height: 350px;">
-                                    <div class="section2-parent-cards-card1-img2-icons">
-                                          <i class="fas fa-cart-plus"></i>
-                                          <i class="far fa-heart"></i>
-                                          <i class="fas fa-search-plus"></i>
-                                    </div>
-
-                                    
-                                </div>
-                            </div>
-                            <div class="section2-parent-cards-card1-content">
-                                <h3 class="section2-parent-cards-card1-content-pr1">Nike Vomero 18</h3>
-                                <p class="section2-parent-cards-card1-content-pr2">$99.99 <span>$120.00</span></p>
-
-                            </div>
-
-                        </div>
-                            <div class="section2-parent-cards-card1">
-
-                            <div class="section2-parent-cards-card1-img">
-                                <div class="section2-parent-cards-card1-img1"><img src="./Image/22.png" style="width: 100%; height: 350px;"></div>
-                                <div class="section2-parent-cards-card1-img2">
-                                    <img src="./Image/21.png" style="width: 100%; height: 350px;">
-                                    <div class="section2-parent-cards-card1-img2-icons">
-                                          <i class="fas fa-cart-plus"></i>
-                                          <i class="far fa-heart"></i>
-                                          <i class="fas fa-search-plus"></i>
-                                    </div>
-
-                                    
-                                </div>
-                            </div>
-                            <div class="section2-parent-cards-card1-content">
-                                <h3 class="section2-parent-cards-card1-content-pr1">Nike Zoom Vomero 5</h3>
-                                <p class="section2-parent-cards-card1-content-pr2">$80 <span>$120.00</span></p>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                    <div class="section2-parent-cards-icon2"><i class="fas fa-chevron-right"></i></div>
-                </div>
-
-
-            </div> <!-- section2-parent -->
-        </section> <!--section2  -->
-
-        <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
-
-        <section class="section3">
-
-            <div class="section3-parent">
-                <div class="section3-parent-icon"><i class="fas fa-chevron-left section2-parent-cards-icon1"></i></div>
-
-                <div class="section3-parent-content">
-
-                    <div class="section3-parent-content-main">
-                     <h2 class="section3-parent-content-title">Customer Testimonial</h2>
-                     <p class="section3-parent-content-pr">Everybody is different, which is why we offer styles for every body. Laborum fuga incidunt laboriosam voluptas iure, delectus dignissimos facilis neque nulla earum</p>
-                    </div>
-
-                    <div class="section3-parent-content-image">
-                        <div class="section3-parent-content-image-img"></div>
-                        <div class="section3-parent-content-image-caption">
-                            <p class="section3-parent-content-image-caption-name">nike shoes</p>
-                            <p class="section3-parent-content-image-caption-pr">Designer at Colorlib</p>
+                    <div class="col-sm-4">
+                        <img src="./Image/logo.png" alt="Urban Kicks Logo"
+                            style="width:100px;height:100px;">
+                        <div class="fs-5 footer-text">
+                            <b><i>Our Vision</i></b>
                         </div>
                     </div>
                 </div>
-
-                <div class="section3-parent-icon"><i class="fas fa-chevron-right section2-parent-cards-icon2"></i></div>
-
-
-
-            </div>
-
-
-
-        </section>  <!-- section3 -->
-
-        <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
-
-        <section class="section4">
-            <div class="section4-parent">
-                <div class="section4-parent-titlemain">
-
-                    <h2 class="section4-parent-titlemain-title">You May Like</h2>
-
-                </div>
-
-
-
-                <div class="section4-parent-cards">  <!-- 111 -->
-                    <div class="section4-parent-cards-icon1"><i class="fas fa-chevron-left"></i></div> <!-- -- -->
-                    <div class="section4-parent-cardsparent">  <!-- --- -->
-                        <div class="section4-parent-cards-card1">
-
-                            <div class="section4-parent-cards-card1-img">  <!-- --- -->
-                                <div class="section4-parent-cards-card1-img1"><img src="./Image/29.png" style="width: 100%; height: 350px;"></div>
-                                <div class="section4-parent-cards-card1-img2">   <!-- ---- -->
-                                    <img src="./Image/12.png" style="width: 100%; height: 350px;">
-                                    <div class="section4-parent-cards-card1-img2-icons">
-                                          <i class="fas fa-cart-plus"></i>
-                                          <i class="far fa-heart"></i>
-                                          <i class="fas fa-search-plus"></i>
-                                    </div>
-
-                                    
-                                </div>
-                            </div>
-                            <div class="section2-parent-cards-card1-content">
-                                <h3 class="section4-parent-cards-card1-content-pr1">Nike Mercurial Vapor 16 Elite</h3>
-                                <p class="section4-parent-cards-card1-content-pr2">$70 <span>$130</span></p>
-
-                            </div>
-
-                        </div>
-
-                        <div class="section4-parent-cards-card1">
-
-                            <div class="section4-parent-cards-card1-img">  <!-- --- -->
-                                <div class="section4-parent-cards-card1-img1"><img src="./Image/30.png" style="width: 100%; height: 350px;"></div>
-                                <div class="section4-parent-cards-card1-img2">   <!-- ---- -->
-                                    <img src="./Image/13.png" style="width: 100%; height: 350px;">
-                                    <div class="section4-parent-cards-card1-img2-icons">
-                                          <i class="fas fa-cart-plus"></i>
-                                          <i class="far fa-heart"></i>
-                                          <i class="fas fa-search-plus"></i>
-                                    </div>
-
-                                    
-                                </div>
-                            </div>
-                            <div class="section2-parent-cards-card1-content">
-                                <h3 class="section4-parent-cards-card1-content-pr1">Nike Dunk Low</h3>
-                                <p class="section4-parent-cards-card1-content-pr2">$60 <span>$90</span></p>
-
-                            </div>
-
-                        </div>
-                        <div class="section4-parent-cards-card1">
-
-                            <div class="section4-parent-cards-card1-img">  <!-- --- -->
-                                <div class="section4-parent-cards-card1-img1"><img src="./Image/32.png" style="width: 100%; height: 350px;"></div>
-                                <div class="section4-parent-cards-card1-img2">   <!-- ---- -->
-                                    <img src="./Image/19.png" style="width: 100%; height: 350px;">
-                                    <div class="section4-parent-cards-card1-img2-icons">
-                                          <i class="fas fa-cart-plus"></i>
-                                          <i class="far fa-heart"></i>
-                                          <i class="fas fa-search-plus"></i>
-                                    </div>
-
-                                    
-                                </div>
-                            </div>
-                            <div class="section2-parent-cards-card1-content">
-                                <h3 class="section4-parent-cards-card1-content-pr1">Nike Vomero 18</h3>
-                                <p class="section4-parent-cards-card1-content-pr2">$99 <span>$120.00</span></p>
-
-                            </div>
-
-                        </div>
-                        <div class="section4-parent-cards-card1">
-
-                            <div class="section4-parent-cards-card1-img">  <!-- --- -->
-                                <div class="section4-parent-cards-card1-img1"><img src="./Image/33.png" style="width: 100%; height: 350px;"></div>
-                                <div class="section4-parent-cards-card1-img2">   <!-- ---- -->
-                                    <img src="./Image/38.png" style="width: 100%; height: 350px;">
-                                    <div class="section4-parent-cards-card1-img2-icons">
-                                          <i class="fas fa-cart-plus"></i>
-                                          <i class="far fa-heart"></i>
-                                          <i class="fas fa-search-plus"></i>
-                                    </div>
-
-                                    
-                                </div>
-                            </div>
-                            <div class="section2-parent-cards-card1-content">
-                                <h3 class="section4-parent-cards-card1-content-pr1">Nike Zoom Vomero 5</h3>
-                                <p class="section4-parent-cards-card1-content-pr2">$80 <span>$120.00</span></p>
-
-                            </div>
-
-                        </div>
-
-
+                <hr class="footer-hr">
+                <div class="row text-center mt-2">
+                    <div class="col-sm-4">
+                        <p class="footer-text">Tel: 000-000-000</p>
+                        <p class="footer-text">Address: New York, USA</p>
+                        <p class="footer-text">Fax: 000-000-000</p>
                     </div>
-                    <div class="section4-parent-cards-icon2"><i class="fas fa-chevron-right"></i></div>
-                </div>
-
-
-            </div> <!-- section4-parent -->
-        </section> <!--section4  -->
-
-
-        <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
-        <section class="section5">
-
-            <div class="section5-parent">
-
-                <div class="section5-parent-title">
-                    <h2 class="section5-parent-title-main">Latest News</h2>
-                </div>
-
-                <div class="section5-parent-card">
-                    <div class="section5-parent-card-card1">
-
-                        <div class="section5-parent-card-card1-img"><figure><img src="./Image/37.png" style="width: 100%; height: 350px;"></figure></div>
-
-                        <div class="section5-parent-card-card1-content">
-                            <p class="section5-parent-card-card1-content-pr1">Fashion Tips</p>
-                            <h3 class="section5-parent-card-card1-content-title">What Curling Irons Are The Best Ones</h3>
-                            <p class="section5-parent-card-card1-content-pr2">Consectetur adipisicing elit. Laborum fuga incidunt laboriosam voluptas iure, delectus.</p>
-                            <a href="#" class="section5-parent-card-card1-content-link">read more</a>
-                        </div>
-
+                    <div class="col-sm-4">
+                        <p class="footer-text">Products</p>
+                        <p class="footer-text">Special Offers</p>
+                        <p class="footer-text">Size Guide</p>
                     </div>
-
-                    <div class="section5-parent-card-card1">
-
-                        <div class="section5-parent-card-card1-img"><figure><img src="./Image/36.png" style="width: 100%; height: 350px;"></figure></div>
-
-                        <div class="section5-parent-card-card1-content">
-                            <p class="section5-parent-card-card1-content-pr1">Fashion Tips</p>
-                            <h3 class="section5-parent-card-card1-content-title">What Curling Irons Are The Best Ones</h3>
-                            <p class="section5-parent-card-card1-content-pr2">Consectetur adipisicing elit. Laborum fuga incidunt laboriosam voluptas iure, delectus.</p>
-                            <a href="#" class="section5-parent-card-card1-content-link">read more</a>
-                        </div>
-
+                    <div class="col-sm-4">
+                        <p class="footer-text">Quality First</p>
+                        <p class="footer-text">Customer Satisfaction</p>
+                        <p class="footer-text">Style & Comfort</p>
                     </div>
-                    <div class="section5-parent-card-card1">
-
-                        <div class="section5-parent-card-card1-img"><figure><img src="./Image/35.png" style="width: 100%; height: 350px;"></figure></div>
-
-                        <div class="section5-parent-card-card1-content">
-                            <p class="section5-parent-card-card1-content-pr1">Fashion Tips</p>
-                            <h3 class="section5-parent-card-card1-content-title">What Curling Irons Are The Best Ones</h3>
-                            <p class="section5-parent-card-card1-content-pr2">Consectetur adipisicing elit. Laborum fuga incidunt laboriosam voluptas iure, delectus.</p>
-                            <a href="#" class="section5-parent-card-card1-content-link">read more</a>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>   <!-- section5-parent -->
-
-        </section>  <!-- section5 -->
-
-        <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// --> 
-       <section class="section6">
-
-        <div class="section6-parent">
-
-            <div class="section6-parent-icon-card1">
-
-                <div class="section6-parent-icon-card1-1">  <!-- --- -->
-                                <div class="section6-parent-icon-card1-1-1"><i class="fa-solid fa-truck-fast "></i></div>
-                                <div class="section6-parent-icon-card1-1-2">   <!-- ---- -->
-                                    <i class="fa-solid fa-truck-fast "></i>
-                                 </div>
-                </div>
-                  <div class="section6-parent-icon-card1-content">
-                        <h3 class="section6-parent-icon-card1-content-title">Fast & Free Delivery</h3>
-                        <p class="section6-parent-icon-card1-content-p">Free delivery on all orders </p>
-
-                  </div>
-
-            </div>
-
-            <div class="section6-parent-icon-card1">
-
-                <div class="section6-parent-icon-card1-1">  <!-- --- -->
-                                <div class="section6-parent-icon-card1-1-1"><i class="fa-solid fa-credit-card"></i></div>
-                                <div class="section6-parent-icon-card1-1-2">   <!-- ---- -->
-                                    <i class="fa-solid fa-credit-card"></i>
-                                 </div>
-                </div>
-                  <div class="section6-parent-icon-card1-content">
-                        <h3 class="section6-parent-icon-card1-content-title">Fast & Free Delivery</h3>
-                        <p class="section6-parent-icon-card1-content-p">Free delivery on all orders </p>
-
-                  </div>
-
-            </div>
-            <div class="section6-parent-icon-card1">
-
-                <div class="section6-parent-icon-card1-1">  <!-- --- -->
-                                <div class="section6-parent-icon-card1-1-1"><i class="fa-solid fa-money-bill"></i></div>
-                                <div class="section6-parent-icon-card1-1-2">   <!-- ---- -->
-                                    <i class="fa-solid fa-money-bill"></i>
-                                 </div>
-                </div>
-                  <div class="section6-parent-icon-card1-content">
-                        <h3 class="section6-parent-icon-card1-content-title">Fast & Free Delivery</h3>
-                        <p class="section6-parent-icon-card1-content-p">Free delivery on all orders </p>
-
-                  </div>
-
-            </div>
-            <div class="section6-parent-icon-card1">
-
-                <div class="section6-parent-icon-card1-1">  <!-- --- -->
-                                <div class="section6-parent-icon-card1-1-1"><i class="fa-solid fa-user-clock"></i></div>
-                                <div class="section6-parent-icon-card1-1-2">   <!-- ---- -->
-                                    <i class="fa-solid fa-user-clock"></i>
-                                 </div>
-                </div>
-                  <div class="section6-parent-icon-card1-content">
-                        <h3 class="section6-parent-icon-card1-content-title">Fast & Free Delivery</h3>
-                        <p class="section6-parent-icon-card1-content-p">Free delivery on all orders </p>
-
-                  </div>
-
-            </div>
-        </div>  <!-- section6-parent -->
-
-
-      </section>  <!--section6  -->
-
-      <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
-      <footer class="footer-end">
-        <div class="footer-end-parent">
-            <div class="footer-end-parent-card1">
-                <div class="footer-end-parent-card1-1">
-                    <h3 class="footer-end-parent-card1-1-title">Subscribe Newsletter</h3>
-                    <p class="footer-end-parent-card1-1-p">Subscribe newsletter to get 5% on all products.</p>
-                </div>
-                <div class="footer-end-parent-card1-2">
-                    <input class="footer-end-parent-card1-2-email" type="email" placeholder="Enter Your Email">
-                    <button class="footer-end-parent-card1-2-btn">subscribe</button>
-                </div>
-                <div class="footer-end-parent-card1-3">
-                    <i class="fab fa-facebook footer-end-parent-card1-3-icon"></i>
-                    <i class="fab fa-instagram footer-end-parent-card1-3-icon"></i>
-                    <i class="fab fa-youtube footer-end-parent-card1-3-icon"></i>
                 </div>
             </div>
-            <hr>
-
-            <div class="footer-end-parent-card2">
-                <div class="footer-end-parent-card2-icon">
-                    <figure><img src="./Image/5.png" alt="logo" width="100px" height="30px"></figure>Nike&nbsp;<span class="footer-end-parent-card2-icon-sp"> Shoes</span>
-
+            <div class="container py-4 d-block d-sm-none">
+                <div class="row text-center mb-3">
+                    <div class="col-12">
+                        <img src="./Image/logo.png" alt="Urban Kicks Logo"
+                            style="width:100px;height:100px;">
+                        <div class="fs-5 footer-text">
+                            <b><i>Urban Kicks</i></b>
+                        </div>
+                        <p class="footer-text">Tel: 000-000-000</p>
+                        <p class="footer-text">Address: New York, USA</p>
+                        <p class="footer-text">Fax: 000-000-000</p>
+                        <hr class="footer-hr">
+                    </div>
                 </div>
-
-                <div class="footer-end-parent-card2-content">
-                    <h4 class="footer-end-parent-card2-content-title">Shop Men</h4>
-                    <ul>
-                        <a href="#"><li>Clothing Fashion</li></a>
-                        <a href="#"><li>Winter</li></a>
-                        <a href="#"><li>Summer</li></a>
-                        <a href="#"><li>Formal</li></a>
-                        <a href="#"><li>Casual</li></a>
-                    </ul>
-
+                <div class="row text-center mb-3">
+                    <div class="col-12">
+                        <img src="./Image/logo.png" alt="Urban Kicks Logo"
+                            style="width:100px;height:100px;">
+                        <div class="fs-5 footer-text">
+                            <b><i>Quick Links</i></b>
+                        </div>
+                        <p class="footer-text">Products</p>
+                        <p class="footer-text">Special Offers</p>
+                        <p class="footer-text">Size Guide</p>
+                        <hr class="footer-hr">
+                    </div>
                 </div>
-                <div class="footer-end-parent-card2-content">
-                    <h4 class="footer-end-parent-card2-content-title">Shop Women</h4>
-                    <ul>
-                        <a href="#"><li>Clothing Fashion</li></a>
-                        <a href="#"><li>Winter</li></a>
-                        <a href="#"><li>Summer</li></a>
-                        <a href="#"><li>Formal</li></a>
-                        <a href="#"><li>Casual</li></a>
-                    </ul>
-
+                <div class="row text-center mb-3">
+                    <div class="col-12">
+                        <img src="./Image/logo.png" alt="Urban Kicks Logo"
+                            style="width:100px;height:100px;">
+                        <div class="fs-5 footer-text">
+                            <b><i>Our Vision</i></b>
+                        </div>
+                        <p class="footer-text">Quality First</p>
+                        <p class="footer-text">Customer Satisfaction</p>
+                        <p class="footer-text">Style & Comfort</p>
+                    </div>
                 </div>
-                <div class="footer-end-parent-card2-content">
-                    <h4 class="footer-end-parent-card2-content-title">Baby Collection</h4>
-                    <ul>
-                        <a href="#"><li>Clothing Fashion</li></a>
-                        <a href="#"><li>Winter</li></a>
-                        <a href="#"><li>Summer</li></a>
-                        <a href="#"><li>Formal</li></a>
-                        <a href="#"><li>Casual</li></a>
-                    </ul>
-
-                </div>
-                <div class="footer-end-parent-card2-content">
-                    <h4 class="footer-end-parent-card2-content-title">Quick Links</h4>
-                    <ul>
-                        <a href="#"><li>Track Your Order</li></a>
-                        <a href="#"><li>Support</li></a>
-                        <a href="#"><li>FAQ</li></a>
-                        <a href="#"><li>Carrier</li></a>
-                        <a href="#"><li>About</li></a>
-                        <a href="#"><li>Contact Us</li></a>
-                    </ul>
-
-                </div>
-
-
             </div>
-
-            <hr>
-            
-            <div class="footer-end-parent-card3">
-                <h4>Copyright © 2025 All rights reserved | This template is made with<span class="sp1"><i class="fas fa-heart"></i></span>by <span class="sp2">Colorlib</span></h4>
-            </div>
-
-
-        </div> <!-- footer-end-parent -->
-
-
-      </footer>  <!--footer  -->
-    
-
-    </body>
+            <hr class="footer-hr" style="margin:10px 0;">
+            <h5 class="text-center text-primary footer-copyright">
+                <b>© 2025 Urban Kicks. All Rights Reserved. Designed By Eng/ Ahmad Oqla</b>
+            </h5><br>
+        </div>
+    </footer>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
 
 </html>
